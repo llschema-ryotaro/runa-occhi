@@ -1,0 +1,82 @@
+@use "../global" as global;
+
+//text default setting
+.u-text {
+    font-size: global.$body-font-size;
+}
+
+.u-text + .u-text {
+    margin-top: 24px;
+    @include global.responsive(md) {
+        margin-top: 32px;
+    }
+}
+
+
+//text color setting
+.u-text--white {
+    color: var(--color-white);
+}
+
+
+//vertical setting
+.u-text--vertical {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+}
+
+.u-text--vertical--variable {
+    writing-mode: sideways-lr;
+    @include global.responsive(md) {
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    }
+}
+
+
+//text-fontfamily
+.u-text--sansserif {
+    font-family: var(--font-family-sans-serif);
+}
+
+.u-text--serif {
+    font-family: var(--font-family-serif);
+}
+
+.u-text--original {
+    font-family: var(--font-family-original);
+}
+
+
+//text-fontstyle
+.u-text--bold {
+    font-weight: 700;
+}
+
+//text-uppercase
+.u-text--uppercase {
+    text-transform: uppercase;
+}
+
+
+//text-br
+.u-br--sm {
+    display: none;
+    @include global.responsive(sm,true) {
+        display: block;
+    }
+}
+
+.u-br--md {
+    display: none;
+    @include global.responsive(md,true) {
+        display: block;
+    }
+}
+
+.u-br--lg {
+    display: none;
+    @include global.responsive(lg,true) {
+        display: block;
+    }
+}

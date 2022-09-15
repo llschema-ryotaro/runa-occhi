@@ -1,0 +1,38 @@
+@use "../global" as global;
+
+.c-title {
+	margin-bottom: 20px;
+	line-height: var(--line-height-small);
+}
+
+.c-title__sub {
+	font-size: global.$font-size-title;
+	font-family: var(--font-family-original);
+	text-transform: uppercase;
+	color: var(--color-primary);
+	margin-bottom: 15px;
+	letter-spacing: 8px;
+}
+
+.c-title__main {
+	letter-spacing: 4px;
+	@include global.responsive(md, true) {
+		font-size: 20px;
+	}
+}
+
+.c-title__main--secondary {
+	display: inline-block;
+	font-size: global.$font-size-xl;
+	font-weight: 700;
+	color: var(--color-primary);
+	background-color: var(--color-white);
+	padding: 2px 10px;
+}
+
+.c-title__big {
+	font-size: global.$font-size-xxxl;
+	font-family: var(--font-family-original);
+	color: var(--color-primary);
+	margin-right: -20px;
+}

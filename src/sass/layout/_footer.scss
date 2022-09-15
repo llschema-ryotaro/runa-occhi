@@ -1,0 +1,133 @@
+@use "../global" as global;
+
+.l-footer {
+  margin-top: 80px;
+  overflow: hidden;
+  @include global.responsive(md) {
+    margin-top: 160px;
+  }
+}
+
+.l-footer__visual {
+  position: relative;
+}
+
+.l-footer__visual * {
+  color: var(--color-primary);
+  font-family: var(--font-family-original);
+  line-height: .9;
+}
+
+.l-footer__visual__text--top {
+  font-size: 26.5vw;
+  text-align: center;
+  margin-left: -1vw;
+  @include global.responsive(md) {
+    font-size: 16.2vw;
+    text-align: left;
+  }
+  & span {
+    font-size: 32vw;
+    margin-left: 0;
+    @include global.responsive(md) {
+      font-size: 16.2vw;
+      margin-left: 2vw;
+    }
+  }
+  & br {
+    @include global.responsive(md) {
+      display: none;
+    }
+  }
+}
+
+.l-footer__visual__text--center {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  @include global.responsive(md) {
+    top: 65%;
+  }
+}
+
+.l-footer__visual__text--center span {
+  font-size: global.$font-size-xl;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: 2px 20px;
+}
+
+.l-footer__visual__text--bottom {
+  font-size: 7.2vw;
+  white-space: nowrap;
+  margin-left: -2px;
+  @include global.responsive(md) {
+    font-size: 7.8vw;
+    margin-left: -10px;
+  }
+}
+
+.l-footer__contents {
+  background-color: var(--color-primary);
+  padding-top: 40px;
+  @include global.responsive(md) {
+    padding-top: 80px;
+  }
+  & * {
+    color: var(--color-white);
+  }
+}
+
+.l-footer__contents__inner {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  @include global.responsive(sm) {
+    padding: 0 50px;
+  }
+}
+
+.l-footer__contents__company {
+  font-size: global.$font-size-small;
+}
+
+.l-footer__contents__details {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  margin-top: 5px;
+  @include global.responsive(md) {
+    column-gap: 4%;
+  }
+}
+
+.l-footer__contents__detail {
+  font-size: global.$font-size-small;
+  width: 100%;
+  @include global.responsive(md) {
+    width: 48%;
+  }
+}
+
+.l-footer__contents__logo {
+  width: 120px;
+  margin-top: 30px;
+  @include global.responsive(md) {
+    width: 195px;
+    margin-top: 10px;
+    margin-left: auto;
+  }
+}
+
+.l-footer__contents__copyright {
+  font-size: 10px;
+  padding: 20px 0;
+  text-align: center;
+  @include global.responsive(sm) {
+    font-size: 12px;
+    padding: 30px 0;
+  }
+}

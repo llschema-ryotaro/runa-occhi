@@ -1,0 +1,24 @@
+@use "../global" as global;
+
+// -------------------- js-fixed ----------------------
+html.is-fixed body {
+	height: 100%;
+	overflow: hidden;
+}
+
+.js-effect {
+    --duration: .6s;
+    --timing-function: ease;
+
+    transition: opacity var(--duration) var(--timing-function), transform var(--duration) var(--timing-function);
+
+    &[data-animated="false"] {
+        opacity: 0;
+        transform: scale(.9, .9);
+    }
+
+    &[data-animated="true"] {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}

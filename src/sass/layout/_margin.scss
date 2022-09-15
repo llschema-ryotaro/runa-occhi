@@ -1,0 +1,114 @@
+@use "../global" as global;
+
+
+.l-top--contents  {
+    margin-top: 100px;
+    @include global.responsive(md) {
+        margin-top: 120px;
+    }
+    @include global.responsive(lg) {
+        margin-top: 160px;
+    }
+}
+
+.l-bottom--contents {
+    margin-bottom: 100px;
+    @include global.responsive(md) {
+        margin-bottom: 120px;
+    }
+    @include global.responsive(lg) {
+        margin-bottom: 160px;
+    }
+}
+
+.l-top--xxxlarge  {
+    margin-top: 140px;
+    @include global.responsive(md) {
+        margin-top: 180px;
+    }
+    @include global.responsive(lg) {
+        margin-top: 220px;
+    }
+}
+
+.l-bottom--xxxlarge {
+    margin-bottom: 140px;
+    @include global.responsive(md) {
+        margin-bottom: 180px;
+    }
+    @include global.responsive(lg) {
+        margin-bottom: 220px;
+    }
+}
+
+.l-top--xxlarge  {
+    margin-top: 100px;
+    @include global.responsive(md) {
+        margin-top: 120px;
+    }
+    @include global.responsive(lg) {
+        margin-top: 140px;
+    }
+}
+
+.l-bottom--xxlarge {
+    margin-bottom: 100px;
+    @include global.responsive(md) {
+        margin-bottom: 120px;
+    }
+    @include global.responsive(lg) {
+        margin-bottom: 140px;
+    }
+}
+
+.l-top--xlarge  {
+    margin-top: 80px;
+    @include global.responsive(md) {
+        margin-top: 80px;
+    }
+    @include global.responsive(lg) {
+        margin-top: 100px;
+    }
+}
+
+.l-bottom--xlarge {
+    margin-bottom: 80px;
+    @include global.responsive(md) {
+        margin-bottom: 80px;
+    }
+    @include global.responsive(lg) {
+        margin-bottom: 100px;
+    }
+}
+
+.l-top--large  {
+    margin-top: 40px;
+    @include global.responsive(md) {
+        margin-top: 40px;
+    }
+    @include global.responsive(lg) {
+        margin-top: 60px;
+    }
+}
+
+.l-bottom-xlarge {
+    margin-bottom: 40px;
+    @include global.responsive(md) {
+        margin-bottom: 40px;
+    }
+    @include global.responsive(lg) {
+        margin-bottom: 60px;
+    }
+}
+
+.l-top--medium  {
+    margin-top: 40px;
+}
+
+.l-bottom--medium {
+    margin-bottom: 40px;
+}
+
+.l-top--small {
+    margin-top: 10px;
+}

@@ -1,0 +1,74 @@
+@use "../global" as global;
+
+.c-link {
+    display: block;
+}
+
+.c-link--full {
+    display: block;
+    height: 100%;
+}
+
+.c-link__text {
+    position: relative;
+    padding-right: 40px;
+    transition: opacity .5s;
+}
+
+.c-link__text::before {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: var(--color-base);
+    transform: translateX(0);
+    transition: transform .5s ease-in-out, opacity .5s;
+}
+
+.c-link__text::after {
+    position: absolute;
+    right: 1px;
+    top: 25%;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--color-base);
+    border-left: none;
+    border-bottom: none;
+    transform: translateX(0) rotateZ(45deg) skew(-8deg,-8deg);
+    transition: transform .5s ease-in-out, opacity .5s;
+}
+
+
+.c-link__text:hover::before {
+    transform: translateX(4px);
+}
+
+.c-link__text:hover::after {
+    transform: translateX(4px) rotateZ(45deg) skew(-8deg,-8deg);
+}
+
+.c-link__text:hover,
+.c-link__text:hover::before,
+.c-link__text:hover::after {
+    opacity: .8;
+}
+
+.c-link--exterminal {
+    position: relative;
+    padding-right: 30px;
+}
+
+.c-link--exterminal::after {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    right: 0;
+    top: 3px;
+    background-image: url(../../svg/exterminal-icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,22 @@
+@use "../global" as global;
+
+.c-img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.c-img--full {
+    @extend .c-img;
+    width: 100%;
+    height: 100%;
+}
+
+.c-img--fit {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    object-position: center;
+    font-family: "object-fit: cover;";
+}

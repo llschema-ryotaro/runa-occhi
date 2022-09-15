@@ -1,0 +1,126 @@
+@use "../global" as global;
+
+.p-mv__title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  font-size: global.$font-size-large;
+  color: var(--color-white);
+  background-color: var(--color-base);
+  padding: 20px 2px;
+  z-index: 10;
+  @include global.responsive(md) {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.p-mv__text {
+  position: relative;
+  height: 100%;
+}
+
+.p-mv__text * {
+  color: var(--color-primary);
+  white-space: nowrap;
+  line-height: .9;
+}
+
+.p-mv__text__top {
+  font-size: 14.8vw;
+  @include global.responsive(md) {
+    font-size: 15.3vw;
+  }
+}
+
+.p-mv__text__left {
+  display: inline-block;
+  font-size: 13vw;
+  margin-right: 10px;
+  margin-left: -1px;
+  @include global.responsive(md) {
+    font-size: 20vh;
+    position: absolute;
+    display: block;
+    top: 25%;
+    left: -1%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.p-mv__text__right {
+  display: inline-block;
+  font-size: 12vw;
+  margin-right: -40px;
+  @include global.responsive(md) {
+    display: block;
+    font-size: 8vh;
+    position: absolute;
+    top: 30%;
+    right: 4vw;
+    margin-right: 0;
+  }
+}
+
+.p-mv__text__bottom {
+  position: absolute;
+  font-size: 15vw;
+  bottom: 3%;
+  right: 0;
+  @include global.responsive(md) {
+    font-size: 8rem;
+    bottom: 0;
+  }
+}
+
+.p-mv__image {
+  position: absolute;
+  width: 100%;
+  padding: 25vw 0 20vw 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9;
+  filter: drop-shadow(0px 0px 20px rgba(20, 16, 4, .5));
+  @include global.responsive(md) {
+    padding: 10vh 8vw;
+  }
+}
+
+.p-mv__person {
+  position: absolute;
+  width: 150%;
+  left: -25%;
+  bottom: 20vw;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(20px 0px 10px rgba(20, 16, 4, .5));
+  z-index: 11;
+  @include global.responsive(md) {
+    width: 100%;
+    left: 0;
+    bottom: 10vh;
+    column-gap: 5%;
+  }
+}
+
+.p-mv__person__image {
+  width: 45%;
+  @include global.responsive(md) {
+    width: 50vh;
+  }
+  &:first-of-type {
+    margin-right: -5%;
+    @include global.responsive(md) {
+      margin-right: 0;
+    }
+  }
+  &:last-of-type {
+    padding-left: 5%;
+    @include global.responsive(md) {
+      padding-left: 0;
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,170 @@
+@use "../global" as global;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    line-height: var(--line-height-base);
+}
+
+html.is-fixed body {
+	height: 100%;
+    min-height: 100vh;
+	overflow: hidden;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: global.$body-font-size;
+    font-weight: 400;
+    font-feature-settings: "palt";
+    line-height: var(--line-height-base);
+    letter-spacing: 2px;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#fff;
+    z-index: 99;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+body.js-fade::after {
+    opacity: 1;
+}
+
+p {
+    font-size: global.$body-font-size;
+    color: var(--color-base);
+}
+
+h1 {
+    font-size: global.$font-size-h1;
+    @include global.responsive(sm) {
+        font-size: global.$font-size-h1 * .7;
+    }
+}
+
+h2 {
+    font-size: global.$font-size-h2;
+    @include global.responsive(sm) {
+        font-size: global.$font-size-h2 * .7;
+    }
+}
+
+h3 {
+    font-size: global.$font-size-h3;
+    @include global.responsive(sm) {
+        font-size: global.$font-size-h3 * .7;
+    }
+}
+
+h4 {
+    font-size: global.$font-size-h4;
+    @include global.responsive(sm) {
+        font-size: global.$font-size-h4 * .65;
+    }
+}
+
+h5 {
+    font-size: global.$font-size-h5;
+    @include global.responsive(sm) {
+        font-size: global.$font-size-h5 * .8;
+    }
+}
+
+h6 {
+    font-size: global.$font-size-h6;
+}
+
+a {
+    color: global.$link-color;
+    transition: opacity .5s;
+    word-break: break-all;
+    &:hover {
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 0.8;
+    }
+    &:focus-visible {
+        outline: none;
+    }
+}
+
+dt, dd {
+    font-size: global.$body-font-size;
+}
+
+input:not([class]) {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    padding: 0.4em 0.8em;
+    width: 100%;
+}
+
+input:not([class]):focus {
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    box-shadow: none;
+    outline: none;
+}
+
+textarea:not([class]) {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    height: 100px;
+    padding: 0.4em 0.8em;
+    width: 100%;
+}
+
+textarea:not([class]):focus {
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    box-shadow: none;
+    outline: none;
+}
+
+button {
+    -webkit-appearance: button;
+    background-color: transparent;
+    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px 7px 2px;
+    text-rendering: auto;
+    color: initial;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 11px system-ui;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}

@@ -1,0 +1,62 @@
+@use "../global" as global;
+
+.p-line {
+  position: absolute;
+  background-color: var(--color-primary);
+  height: 1px;
+  left: -30%;
+}
+
+.p-line.--01 {
+  top: 12%;
+  transform: rotate(150deg);
+  @include global.responsive(md) {
+    top: 75vh;
+    transform: rotate(160deg);
+  }
+}
+
+.p-line.--02 {
+  top: 110vh;
+  transform: rotate(30deg);
+  @include global.responsive(md) {
+    top: 65vh;
+    transform: rotate(30deg);
+  }
+}
+
+.p-line.--03 {
+  top: 44%;
+  transform: rotate(135deg);
+  @include global.responsive(md) {
+    top: 52%;
+    transform: rotate(160deg);
+  }
+}
+
+.p-line.--04 {
+  top: 48%;
+  transform: rotate(30deg);
+  @include global.responsive(md) {
+    top: 60%;
+    transform: rotate(30deg);
+  }
+}
+
+.p-line.--05 {
+  top: 31%;
+  transform: rotate(25deg);
+  @include global.responsive(md) {
+    top: 83%;
+    transform: rotate(165deg);
+  }
+}
+
+.p-line.--06 {
+  top: 84%;
+  transform: rotate(160deg);
+  @include global.responsive(md) {
+    top: 80%;
+    transform: rotate(30deg);
+  }
+}

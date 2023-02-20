@@ -17,11 +17,11 @@ export default function fadeIn() {
         y: 0,
         autoAlpha: 1,
         delay: 0.4,
-        duration: 1.5,
+        duration: 1,
         ease: "power2.out",
         scrollTrigger: {
           trigger: item,
-          start: "top 85%",
+          start: "top 92%",
         },
       }
     );
@@ -34,19 +34,17 @@ export default function fadeIn() {
       line,
       {
         width: 0,
-        y: -5,
         autoAlpha: 0,
       },
       {
         autoAlpha: 1,
-        y: 0,
         width: "160%",
         delay: 1.2,
         duration: 1.5,
         ease: "power2.out",
         scrollTrigger: {
           trigger: line,
-          start: "top 85%",
+          start: "top 92%",
         },
       }
     );
@@ -59,12 +57,10 @@ export default function fadeIn() {
       mvLine,
       {
         width: 0,
-        y: -5,
         autoAlpha: 0,
       },
       {
         autoAlpha: 1,
-        y: 0,
         width: "160%",
         delay: 3,
         duration: 1.5,

@@ -88,7 +88,9 @@
 }
 
 .l-footer__contents__company {
-  font-size: global.$font-size-small;
+  font-size: global.$font-size-medium;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .l-footer__contents__details {

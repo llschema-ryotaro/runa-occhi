@@ -112,6 +112,7 @@
 .l-footer__contents__logo {
   width: 120px;
   margin-top: 30px;
+  margin-bottom: 30px;
   @include global.responsive(md) {
     width: 195px;
     margin-top: 10px;
